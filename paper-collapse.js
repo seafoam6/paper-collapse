@@ -20,6 +20,8 @@
           $(this).closest('.collapse-card').removeClass('active');
           $(this).closest('.collapse-card').find('.collapse-card__body').slideUp(settings.animationDuration, settings.onHideComplete);
         } else {
+          $('.collapse-card').removeClass('active');
+          $('.collapse-card').find('.collapse-card__body').slideUp(settings.animationDuration, settings.onHideComplete);
           settings.onShow.call(this);
           $(this).closest('.collapse-card').addClass('active');
           $(this).closest('.collapse-card').find('.collapse-card__body').slideDown(settings.animationDuration, settings.onShowComplete);
